@@ -1,0 +1,8 @@
+{
+  "name": "html5-canvas-video-homework",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node index.js"
+  }
+}

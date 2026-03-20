@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5 Canvas + Video Edge Detection</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero">
+        <p class="eyebrow">Week 4 Homework - 23127224 Nguyen Le Truc Mai</p>
+        <h1>HTML5 Canvas + Video frame-by-frame edge detection</h1>
+        <p class="intro">
+          This website displays one video and one canvas of the same size. While the video is playing, the canvas shows the detected edges of the
+          current frame.
+        </p>
+      </section>
+
+      <section class="status-bar">
+        <div>
+          <span class="label">Status</span>
+          <strong id="playbackStatus">Ready to play the video</strong>
+        </div>
+        <div>
+          <span class="label">Technique</span>
+          <strong>Sobel Edge Detection + requestAnimationFrame</strong>
+        </div>
+      </section>
+
+      <section class="media-grid" aria-label="Video and canvas">
+        <article class="panel">
+          <div class="panel-head">
+            <span class="chip">Video</span>
+            <h2>Source playback</h2>
+          </div>
+          <video
+            id="sourceVideo"
+            class="media-frame"
+            width="640"
+            controls
+            playsinline
+            preload="auto"
+          >
+            <source src="assets/video.mp4" type="video/mp4" />
+            Your browser does not support the HTML5 video element.
+          </video>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <span class="chip">Canvas</span>
+            <h2>Detected edges</h2>
+          </div>
+          <canvas
+            id="edgeCanvas"
+            class="media-frame"
+            width="640"
+          ></canvas>
+          <p class="panel-note">
+            Applied Graphics exercise based on
+            <strong>Web Graphics Environment</strong>, using manual
+            <strong>edge detection</strong> with the
+            <strong>Sobel operator</strong> on each frame.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
